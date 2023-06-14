@@ -1,0 +1,57 @@
+
+<div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+        <form (ngSubmit)="Submit()" #f="ngForm">
+          <div id="user-data">
+            <div class="form-group">
+              <label for="username">Student name</label>
+              <input type="text" 
+              id="username"
+               class="form-control"
+               ngModel name="username" required max="1"  #vishnu="ngModel">
+               <span class="help-block" *ngIf="vishnu.invalid && vishnu.touched">Plse userName</span>
+              
+               
+            </div>
+           
+            <button class="btn btn-default" type="button">Suggest an Username</button>
+            <div class="form-group">
+              <label for="email">Mail</label>
+              <input type="email" 
+              id="email" 
+              class="form-control" 
+              ngModel name="email"
+              required email #email="ngModel">
+              <span class="help-block" *ngIf="email.invalid && email.touched">Pleas enter valid email </span>
+  
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="secret">Secret Questions</label>
+            <select id="secret" class="form-control" [ngModel]="DefaultquestionAns" name="secret">
+              <option value="pet">Your first Pet?</option>
+              <option value="teacher">Your first teacher?</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <textarea name="reply"   rows="3" [(ngModel)]="answer" class="form-control"></textarea>
+          </div>
+          <div>
+            <p>Reply : {{answer}}</p>
+          </div>
+          <div class="for-group" *ngFor="let gender of genders">
+            <label >
+              <input type="radio" name="gender" ngModel [value]="gender" >
+              {{gender}}</label>
+          </div>
+          <button class="btn btn-primary" type="submit" [disabled]="!f.valid">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+  
+  
+  

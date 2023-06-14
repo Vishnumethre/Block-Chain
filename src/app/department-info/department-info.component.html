@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+            <form (ngSubmit)="Submit()" #v="ngForm">
+                <div class="departmentInfo">
+                    <div class="form-group">
+                        <label for="DepartmentName">Enter department Name</label>
+                        <input type="text" id="DepartmentName" name="deparmentName" ngModel class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="RollNo">Enter Register Number</label>
+                        <input type="text" id="RollNo" name="rollno" ngModel class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="MobileNumber">Enter Mobile Number</label>
+                        <input type="number" id="MobileNumber" name="PhoneNumber" [ngModel]="mobileNumber" class="form-control" maxlength="10">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Ente Your Email Id</label>
+                        <input type="email" id="email" name="Email" ngModel class="form-control" required >
+                    </div>
+                </div>
+                <button class="btn btn-primary" type="submit" [disabled]="!v.valid">Sumbit</button>
+            </form>
+        </div>
+    </div>
+</div>

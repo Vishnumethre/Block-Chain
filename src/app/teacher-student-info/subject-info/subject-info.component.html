@@ -1,0 +1,35 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+            <form (ngSubmit)="Submit()" #f="ngForm">
+                <div class="form-group">
+                    <label for="studen">Subject-I</label>
+                    <input id="studen" type="number" class="form-control" ngModel name="student1">
+                </div>
+                <div class="form-group">
+                    <label for="studen">Subject-II</label>
+                    <input id="studen" type="number" class="form-control" ngModel name="student2">
+                </div>
+                <div class="form-group">
+                    <label for="studen">Subject-III</label>
+                    <input id="studen" type="number" class="form-control" ngModel name="student3">
+                </div>
+                <div class="form-group">
+                    <label for="studen">Subject-IV</label>
+                    <input id="studen" type="number" class="form-control" ngModel name="student4">
+                </div>
+                <div class="form-group">
+                    <label for="studen">Subject-V</label>
+                    <input id="studen" type="number" class="form-control" ngModel name="student5">
+                </div>
+                <div class="form-group">
+                    <label for="studen">Subject-VI</label>
+                    <input id="studen" type="number" class="form-control" ngModel name="student6">
+                 </div>               
+               
+                <button type="submit" class="btn btn-primary"  [disabled]="!f.valid">SAVE</button>
+            </form>
+        </div>
+    </div>
+</div>
