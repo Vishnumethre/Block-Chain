@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 
 @Component({
   selector: 'app-student-info',
@@ -24,7 +24,11 @@ myForm: any;
   Submit()
   {
     console.log(this.signupForm);
-    this.router.navigate(['../Student'],{relativeTo:this.route});
+    this.router.navigate(['../Student'],{queryParams:{allowedit:'1234'},fragment:'loading'});
+    this.route.queryParams.subscribe((para:Params)=>
+    {
+      console.log(para);
+    })
   }
   GetName(name:string)
   {
@@ -33,6 +37,8 @@ myForm: any;
 
 
   ngOnInit(): void {
+    console.log(this.route.snapshot.queryParams);
+    console.log(this.route.snapshot.fragment);
   }
 
 

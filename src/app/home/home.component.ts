@@ -30,7 +30,7 @@ this.user.name=params['name'];
   }
   Navigate()
   {
-  this.route.navigate(['/Student']);
+  this.route.navigate(['/Student'],{queryParams:{allowEdit:'2'},fragment:'loading...'});
   }
 
 }

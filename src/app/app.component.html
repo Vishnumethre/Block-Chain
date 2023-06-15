@@ -3,7 +3,7 @@
     <div class="col-xs-16 col-sm-14 col-md-10 col-sm-offset-1 col-md-offset-2">    
        <ul class="nav nav-tabs">
       <li role="presentation" routerLinkActive="active" [routerLinkActiveOptions]="{'exact':true}"><a routerLink="Home">Home</a></li>
-      <li role="presentation" routerLinkActive="active" ><a routerLink="Student">Student Information Page</a></li>      
+      <li role="presentation" routerLinkActive="active" ><a routerLink="Student" [queryParams]="{allowEdit:'1'}" fragment="loading">Student Information Page</a></li>      
       <li role="presentation" routerLinkActive="active"><a routerLink="Department">Department Information</a></li>
       <li role="presentation" routerLinkActive="active"><a routerLink="StudentData">Student Data Entry</a></li>
       <li role="presentation" routerLinkActive="active"><a routerLink="Student/SubjectInfo">Student Data Entry</a></li>

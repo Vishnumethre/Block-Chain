@@ -17,7 +17,6 @@ export class DataPasserService {
     Sub5:0,
     Sub6:0
   };
-
   constructor() { 
     console.log(DataPasserService.studentInfo);
   }
